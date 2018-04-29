@@ -1,5 +1,8 @@
 FROM python:3.6.5-alpine
 
+LABEL maintainer="daniel.vetter86@gmail.com"
+EXPOSE 5050
+
 RUN apk add --no-cache --virtual build-deps gcc python3-dev musl-dev \
     && apk add --no-cache postgresql-dev \
     && pip install psycopg2 \
